@@ -39,7 +39,7 @@ againBtn.addEventListener("click", () => {
   messageBox.innerHTML = "Start guessing...";
   answer = newNumber();
   answerInput.value = "1";
-  numberBox = "?";
+  numberBox.textContent = "?";
 });
 
 function checkAnswer() {
