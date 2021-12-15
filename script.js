@@ -24,6 +24,7 @@ answerInput.value = "1";
 const WIN = "You Win!";
 const LOW = "Too low!";
 const HIGH = "Too high!";
+const GAME_OVER = "You exhausted the number of guesses";
 
 checkBtn.addEventListener("click", checkAnswer);
 answerInput.addEventListener("keyup", (event) => {
@@ -54,6 +55,10 @@ function setMessage(message) {
   messageBox.textContent = message;
   if (message !== WIN) {
     score--;
+    if (score === 0) {
+      messageBox.textContent = GAME_OVER;
+      gameOn = false;
+    }
   } else {
     gameOn = false;
     if (firstGame) {
