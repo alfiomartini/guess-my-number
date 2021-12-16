@@ -42,6 +42,7 @@ againBtn.addEventListener("click", () => {
   answer = newNumber();
   answerInput.value = "1";
   numberBox.textContent = "?";
+  numberBox.style.backgroundColor = "#eeeeee";
 });
 
 function checkAnswer() {
@@ -63,6 +64,7 @@ function setMessage(message) {
   } else {
     gameOn = false;
     numberBox.textContent = parseInt(answerInput.value);
+    numberBox.style.backgroundColor = "lightgreen";
     if (firstGame) {
       highestScore = score;
       firstGame = false;
