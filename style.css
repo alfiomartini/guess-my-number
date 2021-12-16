@@ -123,3 +123,51 @@ h1 {
 }
 
 /* Media Queries */
+
+@media (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .left {
+    margin-top: 20px;
+  }
+
+  .right {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .number {
+    width: 10rem;
+    padding: 1.5rem 10px;
+  }
+
+  .guess {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    padding: 1.5rem;
+    width: 16rem;
+  }
+  .message {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .between {
+    font-size: 1.7rem;
+  }
+
+  header {
+    margin: 20px 20px;
+  }
+}
