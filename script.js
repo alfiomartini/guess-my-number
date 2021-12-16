@@ -21,9 +21,9 @@ let gameOn = true;
 let highestScore = MAX_VAL;
 let firstGame = true;
 answerInput.value = "1";
-const WIN = "You Win!";
-const LOW = "Too low!";
-const HIGH = "Too high!";
+const WIN = "You Won!";
+const LOW = "Low Guess!";
+const HIGH = "High Guess!";
 const GAME_OVER = "Number of guesses exhausted!";
 
 checkBtn.addEventListener("click", checkAnswer);
