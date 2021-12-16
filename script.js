@@ -29,7 +29,9 @@ const GAME_OVER = "Number of guesses exhausted!";
 checkBtn.addEventListener("click", checkAnswer);
 answerInput.addEventListener("keyup", (event) => {
   let { key, keyCode } = event;
-  if (key === "Enter" || keyCode === 13) checkAnswer();
+  if (key === "Enter" || keyCode === 13) {
+    if (!isNaN(parseInt(answerInput.value))) checkAnswer();
+  }
 });
 
 againBtn.addEventListener("click", () => {
@@ -43,7 +45,7 @@ againBtn.addEventListener("click", () => {
 });
 
 function checkAnswer() {
-  if (!gameOn) return;
+  if (!gameOn || isNaN(parseInt(answerInput.value))) return;
   let guess = parseInt(answerInput.value);
   if (guess === answer) setMessage(WIN);
   else if (guess < answer) setMessage(LOW);
